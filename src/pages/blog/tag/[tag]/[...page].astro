@@ -6,16 +6,15 @@ import createSlug from "../../../../lib/createSlug";
 
 export async function getStaticPaths({ paginate }) {
   const all_posts = await getCollection("blog");
-  const all_tags = all_posts.flatMap((post) => {
-    return post.data.tags || [];
-  });
+  const all_tags = [...new Set(all_posts.flatMap((post) => post.data.tags || []))];
 
   return all_tags.flatMap((tag) => {
     const filtred_posts = all_posts.filter((post) => {
       return post.data.tags?.includes(tag);
     });
+    const tagSlug = tag.toLowerCase().replace(/\s+/g, "-");
     return paginate(filtred_posts, {
-      params: { tag },
+      params: { tag: tagSlug },
       pageSize: 10,
     });
   });

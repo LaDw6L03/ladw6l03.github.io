@@ -5,10 +5,15 @@ pubDate: "Feb 29 2026"
 heroImage: "/glpi.webp"
 tags: ["Bigbang","Fart Station"]
 ---
+**Mise à jours des paquets**
+
 En premier temps il faut faire les mises à jours de la machine. 
 ``` bash
 sudo apt update && apt upgrade -y
 ```
+
+**Installation des paquets**
+
 Ensuite je vais installer Apache, MariaDB et PHP qui sont nécéssaire pour le fonctionnement de GLPI.
 
 ``` bash
@@ -17,7 +22,37 @@ sudo apt install php-fpm -y
 sudo apt install php-{mysql,mbstring,curl,gd,xml,intl,ldap,apcu,xmlrpc,zip,bz2,bcmath} -y
 ```
 
-**What I Loved About RFA**
+**Préparation de la base de donnée**
+
+Utilisation de MariaDB précédemment installé via la commande : mariadb
+
+``` sql
+create database glpi_group;
+grant all privileges on glpi_group.* to group_glpi@localhost identified by « caribou » ;
+flush privileges
+```
+
+**Téléchargement et extraction de GLPI**
+
+``` bash
+cd /tmp
+wget https://github.com/glpi-project/glpi/releases/download/11.0.0/glpi-11.0.0.tgz
+tar -xvzf glpi-11.0.0.tgz -C /var/www/html
+chown -R www-data /var/www/html
+```
+
+**Préparation du VHOST apache2**
+
+``` bash
+cd /etc/apache2/sites-available/
+cp 000-default.conf glpi.conf
+nano glpi.conf
+```
+
+Il faut écrire dans le fichier les informations ci-dessous, le ServerName dépend de votre configuration.
+
+![alt="GLPI"](/vhost-glpi.png)
+
 
 - **Extensive Onboarding**: Donec placerat ante eget tellus egestas, in gravida ex fermentum. Nunc ultrices consectetur erat, a pellentesque elit. Ut pellentesque varius nibh vitae dictum. Etiam tincidunt tempus elit eget mattis. Vestibulum convallis turpis sed interdum aliquet. Nam vestibulum felis in erat finibus, quis bibendum lectus blandit. Proin vel ornare justo, quis faucibus enim. In hendrerit euismod quam sit amet feugiat. Fusce in massa auctor, rutrum tellus quis, bibendum justo. Suspendisse suscipit finibus egestas. Curabitur nunc erat, lobortis at leo eget, tempus fringilla lectus. Maecenas porttitor enim vel neque pellentesque, sit amet congue ante lobortis. Curabitur sit amet sollicitudin elit. Ut nunc eros, laoreet sit amet quam sed, eleifend ullamcorper eros.
 

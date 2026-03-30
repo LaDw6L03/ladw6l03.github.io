@@ -62,7 +62,7 @@ a2ensite glpi.conf
 systemctl restart apache2
 ```
 
-## 5. Activation du HTTPS avec un certificat auto-signé
+**Activation du HTTPS avec un certificat auto-signé**
 
 ```bash
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/glpi.key -out /etc/ssl/certs/glpi.crt
@@ -72,23 +72,36 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/glp
 cd /etc/apache2/sites-available/
 cp default-ssl.conf glpi-ssl.conf
 nano glpi-ssl.conf
+```
+![alt="VHOST"](/glpi_apache.webp)
+```bash
 a2enmod ssl
 a2ensite glpi-ssl.conf
 systemctl restart apache2
 ```
 
-## 6. Configuration DNS
+**Configuration DNS**
 
-Entrée DNS ajoutée : `glpi.group.lan`
+- Entrée DNS ajoutée : `glpi.group.lan`
+```bash
+nano /etc/bind/db.group.lan
+```
+![alt="INSTALL"](/glpi_bind.webp)
 
-## 7. Installation via l’interface web
+**Installation via l’interface web**
 
 - Accéder à : https://glpi.group.lan
+![alt="INSTALL"](/glpi_install.webp)
 - Choisir la langue : Français
 - Vérification des dépendances
 - Configuration de la base `glpi_group`
+![alt="STEP1T"](/glpi_step1.webp)
+- Choisir la base de donnée existante
+![alt="STEP2"](/glpi_step2.webp)
+- Initialisation de la base de donnée
+![alt="STEP3"](/glpi_step3.webp)
 
-## 8. Identifiants par défaut
+**Identifiants par défaut**
 
 ```
 Utilisateur : glpi

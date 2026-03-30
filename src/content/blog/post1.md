@@ -1,9 +1,9 @@
 ---
-title: "Installation de GLPI | Debian 13"
+title: "Installation de GLPI"
 description: "Installation de GLPI."
 pubDate: "Feb 29 2026"
 heroImage: "/glpi.webp"
-tags: ["Bigbang","Fart Station"]
+tags: ["Debian 13","GLPI 11"]
 ---
 **Mise à jours des paquets**
 
@@ -24,8 +24,11 @@ sudo apt install php-{mysql,mbstring,curl,gd,xml,intl,ldap,apcu,xmlrpc,zip,bz2,b
 
 **Préparation de la base de donnée**
 
-Utilisation de MariaDB précédemment installé via la commande : mariadb
+Utilisation de MariaDB précédemment installé via la commande : 
 
+```bash
+mariadb
+```
 ``` sql
 create database glpi_group;
 grant all privileges on glpi_group.* to group_glpi@localhost identified by « caribou » ;
@@ -50,8 +53,6 @@ nano glpi.conf
 ```
 
 Il faut écrire dans le fichier les informations ci-dessous, le ServerName dépend de votre configuration.
-
-
 
 
 ```bash
@@ -108,4 +109,3 @@ Utilisateur : glpi
 Mot de passe : glpi
 ```
 
-![alt="GLPI"](/vhost-glpi.png)

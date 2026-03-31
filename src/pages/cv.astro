@@ -4,131 +4,124 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+
+  <div class="mb-14">
+    <div class="text-3xl w-full font-bold mb-6">Profile</div>
+    <div class="mb-10 text-justify">
+      Je suis Axel, j'ai 20 ans, dans le monde quotidien je suis passionné d'informatique et surtout d'automobile ! 
+    </div>
+    
+    <div class="mb-12">
+      <a href="https://spoo.me/cv-axel">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">
+          Télécharger mon CV
+        </button>
+      </a>
+    </div>
   </div>
 
-  <div class="mb-10 text-justify">
-    Je suis Axel, j'ai 20 ans, dans le monde quotidient je suis passionné d'informatique et surtout d'automobile ! 
-  </div>
-  <!-- Download Resume Button -->
-  <div class="mb-5">
-    <a href="https://spoo.me/cv-axel">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Télécharger mon CV
-      </button>
-    </a>
-  </div>
-  
-    <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>SMB</li>
-    <li>Windows 10 et 11</li>
-    <li>Debian 12 et 13</li>
-    <li>GLPI</li>
-    <li>Apache</li>
-    <li>Bind9</li>
-    <li>OPNsense</li>
-    <li>Nextcloud</li>
-    <li>Zabbix</li>
-    <li>Centreon</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Soft Skills</div>
+  <div class="mb-14">
+    <div class="text-3xl w-full font-bold mb-6">Skills</div>
+    <ul class="list-disc md:columns-5 columns-2 mx-6 gap-y-3">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>SMB</li>
+      <li>Windows 10 et 11</li>
+      <li>Debian 12 et 13</li>
+      <li>GLPI</li>
+      <li>Apache</li>
+      <li>Bind9</li>
+      <li>OPNsense</li>
+      <li>Nextcloud</li>
+      <li>Zabbix</li>
+      <li>Centreon</li>
+    </ul>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Patient</li>
-    <li>exemple</li>
-    <li>exemple</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Éducation</div>
+  <div class="mb-14">
+    <div class="text-3xl w-full font-bold mb-6">Soft Skills</div>
+    <ul class="list-disc md:columns-5 columns-2 mx-6 gap-y-3">
+      <li>Patient</li>
+      <li>exemple</li>
+      <li>exemple</li>
+    </ul>
   </div>
 
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="BTS SIO option SISR"
-      subtitle="2024-2026 à Lycée Jean Jaurès, Aubusson, France"
-    />
-    <TimeLineElement
-      title="Bac Pro TNE option RISC"
-      subtitle="2021-2024 à Lycée Albert Einstein, Montluçon, France"
-    />
+  <div class="mb-14">
+    <div class="text-3xl w-full font-bold mb-6">Éducation</div>
+    <div class="time-line-container grid gap-6 mb-4">
+      <TimeLineElement
+        title="BTS SIO option SISR"
+        subtitle="2024-2026 à Lycée Jean Jaurès, Aubusson, France"
+      />
+      <TimeLineElement
+        title="Bac Pro TNE option RISC"
+        subtitle="2021-2024 à Lycée Albert Einstein, Montluçon, France"
+      />
+    </div>
   </div>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
+  <div class="mb-14">
+    <div class="text-3xl w-full font-bold mb-6">Experience</div>
+    <div class="time-line-container grid gap-7">
+      <TimeLineElement
+        title="Alternance"
+        subtitle="De Septembre 2024 à Juillet 2026 à Arcane Network, Desertines, France"
+      >
+        Durant cette alternance, j'ai fait de la l'installation de solution, de la maintenance informatique physique et logiciel et bien d'autres ! 
+      </TimeLineElement>
+      <TimeLineElement
+        title="Stagiaire"
+        subtitle="De Septembre 2024 à Juillet 2026 à Arcane Network, Desertines, France"
+      >
+        Durant ce stage de 8 semaines.    
+      </TimeLineElement>
+      <TimeLineElement
+        title="Stagiaire"
+        subtitle="De Septembre 2024 à Juillet 2026 à Arcane Network, Desertines, France"
+      >
+        Durant ce stage de 8 semaines.
+      </TimeLineElement>
+      <TimeLineElement
+        title="Stagiaire"
+        subtitle="De Juin 2022 à Juillet 2022 à Safran Electronics and Defense, Montluçon, France"
+      >
+        Durant 6 semaines, j'ai accompli mes missions tel que de l'archivage de dossier et j'ai apporter mon aide au developpement d'une application en Virtual Basic Application (VBA)
+      </TimeLineElement>
+       <TimeLineElement
+        title="Stagiaire"
+        subtitle="De Décembre 2020 à Décembre 2020 à FONTVIELLE SAS, Evaux-les-bains, France"
+      >
+        Durant 1 semaines, j'ai découvert les missions de : Mécanicien Agricole itinérant, Chef d'atelier et de Gestionnaire.
+      </TimeLineElement>
+    </div>
   </div>
 
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Alternance"
-      subtitle="De Septembre 2024 à Juillet 2026 à Arcane Network, Desertines, France"
-    >
-      Durant cette alternance, j'ai fait de la l'installation de solution, de la maintenance informatique physique et logiciel et bien d'autres ! 
 
-    </TimeLineElement>
-    <TimeLineElement
-      title="Stagiaire"
-      subtitle="De Septembre 2024 à Juillet 2026 à Arcane Network, Desertines, France"
-    >
-      Durant ce stage de 8 semaines.    
-    </TimeLineElement>
-    <TimeLineElement
-      title="Stagiaire"
-      subtitle="De Septembre 2024 à Juillet 2026 à Arcane Network, Desertines, France"
-    >
-      Durant ce stage de 8 semaines.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Stagiaire"
-      subtitle="De Juin 2022 à Juillet 2022 à Safran Electronics and Defense, Montluçon, France"
-    >
-     Durant 6 semaines, j'ai accompli mes missions tel que de l'archivage de dossier et j'ai apporter mon aide au developpement d'une application en Virtual Basic Application (VBA)
-    </TimeLineElement>
-     <TimeLineElement
-      title="Stagiaire"
-      subtitle="De Décembre 2020 à Décembre 2020 à FONTVIELLE SAS, Evaux-les-bains, France"
-    >
-     Durant 1 semaines, j'ai découvert les missions de : Mécanicien Agricole itinérant, Chef d'atelier et de Gestionnaire.
-    </TimeLineElement>
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-  
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-      <ul class="list-disc mx-6 mb-10 grid gap-2">
-         <li>
-        <a href="#" onclick="window.open('https://secnumacademie.gouv.fr/'); return false;" target="_blank">
-            MOOC ANSSI
+  <div class="mb-14">
+    <div class="text-3xl w-full font-bold mb-6">Certifications</div>
+    <ul class="list-disc mx-6 grid gap-4">
+      <li>
+        <a href="https://secnumacademie.gouv.fr/" target="_blank" class="hover:underline">
+          MOOC ANSSI
         </a>
-    </li>
-     <li>
-        <a href="#" onclick="window.open('https://netacad.com'); return false;" target="_blank">
-            Introduction to Cybersecurity
+      </li>
+      <li>
+        <a href="https://netacad.com" target="_blank" class="hover:underline">
+          Introduction to Cybersecurity
         </a>
-    </li>
-    <li>
-        <a href="#" onclick="window.open('https://netacad.com'); return false;" target="_blank">
-            CCNAv7: Introduction to Networks
+      </li>
+      <li>
+        <a href="https://netacad.com" target="_blank" class="hover:underline">
+          CCNAv7: Introduction to Networks
         </a>
-    </li>
-    <li>
-        <a href="#" onclick="window.open('https://netacad.com'); return false;" target="_blank">
-            Introduction to IoT
+      </li>
+      <li>
+        <a href="https://netacad.com" target="_blank" class="hover:underline">
+          Introduction to IoT
         </a>
-    </li>
-</ul>
+      </li>
+    </ul>
+  </div>
 
-  
 </BaseLayout>

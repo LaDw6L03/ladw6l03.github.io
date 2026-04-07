@@ -18,7 +18,7 @@ dependencies:
     specifier: ^6.0.2
     version: 6.0.2(astro@6.1.4)(tailwindcss@3.4.19)
   astro:
-    specifier: ^6.1.4
+    specifier: ^6.0.6
     version: 6.1.4
   daisyui:
     specifier: ^4.4.10

@@ -1,18 +1,15 @@
 ---
 title: "Installation de Wazuh"
-description: "Utilisation de PVE Helper Script"
+description: "Utilisation de PVE Helper Scripts"
 pubDate: "2026/05/12"
 heroImage: "/wazuh_logo.webp"
 ---
-
-# Wazuh
-
 ### Sommaire :
 
 Installation de Wazuh via PVE Helper Script :
 
 
-## Installation de Wazuh via PVE Helper Script :
+## Installation de Wazuh via PVE Helper Scripts :
 
 Installation de Wazuh avec l’utilisation d’un script, cela sera un container LXC.
 

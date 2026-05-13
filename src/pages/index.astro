@@ -28,6 +28,7 @@ const last_posts = posts.slice(0, 2);
   {
     last_posts.map((post) => (
       <>
+      <div class="divider my-0"></div>
         <HorizontalCard
           title={post.data.title}
           img={post.data.heroImage}
@@ -36,7 +37,6 @@ const last_posts = posts.slice(0, 2);
           target="_self"
           badge={post.data.badge}
         />
-        <div class="divider my-0" />
       </>
     ))
   }
@@ -52,6 +52,6 @@ const last_posts = posts.slice(0, 2);
       img="/vagedcsuite.webp"
       desc="Fork et modification d'un outil gratuit de reprogrammation moteur : EDC15VM+/P+"
       url="https://github.com/LaDw6L03/VAGEDCSuite"/>
-  <div class="divider my-0"></div>
+  
 
 </BaseLayout>

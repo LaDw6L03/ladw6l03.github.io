@@ -5,22 +5,29 @@ let articles: { title: string; link: string; pubDate: string; description: strin
 let fetchError = false;
 
 function decodeHtmlEntities(text: string): string {
-  return text
-    .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec))
+  if (!text) return "";
+  let decoded = text
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&apos;/g, "'")
     .replace(/&nbsp;/g, ' ')
+    .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(parseInt(dec)))
     .replace(/&8217;/g, '’')
     .replace(/&8211;/g, '–')
     .replace(/&8212;/g, '—')
     .replace(/&eacute;/g, 'é')
     .replace(/&egrave;/g, 'è')
     .replace(/&agrave;/g, 'à')
-    .replace(/&ccedil;/g, 'ç')
-    .trim();
+    .replace(/&ccedil;/g, 'ç');
+
+  decoded = decoded
+    .replace(/&amp;nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&amp;#(\d+);/g, (match, dec) => String.fromCharCode(parseInt(dec)));
+
+  return decoded.trim();
 }
 
 try {
@@ -56,7 +63,7 @@ try {
       ?? item.match(/<description>([\s\S]*?)<\/description>/)?.[1]
       ?? "";
 
-    let description = decodeHtmlEntities(descRaw)
+    const description = decodeHtmlEntities(descRaw)
       .replace(/<[^>]+>/g, "")
       .trim()
       .slice(0, 220);
@@ -73,12 +80,8 @@ try {
     });
   }
 
-  // Tri par date (plus récent en premier) + limitation
-  articles.sort((a, b) => {
-    const dateA = new Date(a.pubDate || 0);
-    const dateB = new Date(b.pubDate || 0);
-    return dateB.getTime() - dateA.getTime();
-  });
+  
+  articles.sort((a, b) => new Date(b.pubDate || 0).getTime() - new Date(a.pubDate || 0).getTime());
   articles = articles.slice(0, 12);
 
 } catch (e) {

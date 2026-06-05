@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Mentions Légales";
+---
+
+<BaseLayout title={title} sideBarActiveItemID="mentions-legales">
+
+  <div class="max-w-3xl mx-auto prose prose-neutral dark:prose-invert">
+    <h1 class="text-4xl font-bold mb-8">Mentions Légales</h1>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4">Éditeur du site</h2>
+    <p>Axel Dugat</p>
+    <p>Email de contact : axeldugat23@gmail.com</p>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4">Hébergement</h2>
+    <p>Ce site est hébergé par GitHub Pages.</p>
+    <p>GitHub, Inc.<br>88 Colin P Kelly Jr St<br>San Francisco, CA 94107, USA</p>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4">Données personnelles</h2>
+    <p>Ce site ne collecte aucune donnée personnelle via des formulaires ou cookies de tracking.</p>
+  </div>
+
+</BaseLayout>

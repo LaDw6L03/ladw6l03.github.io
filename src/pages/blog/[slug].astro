@@ -30,5 +30,7 @@ const { Content } = await render(entry);
   badge={post.badge}
   tags={post.tags}
 >
-  <Content />
+  <article class="prose prose-invert max-w-none">
+    <Content />
+  </article>
 </PostLayout>

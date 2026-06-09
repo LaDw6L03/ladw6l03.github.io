@@ -3,6 +3,36 @@
   themes: all;
 };
 
+@plugin "@tailwindcss/typography";
+
+/* Blog */
+.prose {
+  max-width: none;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose pre {
+  background-color: hsl(var(--n));
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+}
+
+.prose img {
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Theme */
 [data-theme] .outline-base-content[data-act-class="outline"] {
   outline-color: hsl(var(--bc));
 }

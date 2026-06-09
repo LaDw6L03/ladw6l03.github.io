@@ -3,6 +3,10 @@
   themes: all;
 };
 
+[data-theme] .outline-base-content[data-act-class="outline"] {
+  outline-color: hsl(var(--bc));
+}
+
 .time-line-container > div:last-child .education__time > .education__line {
     display: none;
 }

@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4        # ✅ v4 est déjà Node 24 compatible (depuis v4.2.2)
+        uses: actions/checkout@v4        
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -48,14 +48,18 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v4      # ✅ v4 est déjà Node 24 compatible (depuis v4.4.0)
+        uses: actions/setup-node@v4
         with:
           node-version: "24"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
       - name: Setup Pages
         id: pages
+<<<<<<< Updated upstream
         uses: actions/configure-pages@v6  # ✅ v5 est déjà Node 24 compatible
+=======
+        uses: actions/configure-pages@v5 
+>>>>>>> Stashed changes
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}

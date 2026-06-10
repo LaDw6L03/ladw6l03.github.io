@@ -2,22 +2,22 @@ name: Mise à jour Veilles
 
 on:
   schedule:
-    - cron: '0 * * * *'        
-  workflow_dispatch:          
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
     permissions:
-      contents: read
-      pages: write
+      contents: write     
       id-token: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          fetch-depth: 0   
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -36,6 +36,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          force_orphan: true        
+          force_orphan: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

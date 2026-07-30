@@ -15,14 +15,14 @@ dependencies:
     specifier: ^3.7.1
     version: 3.7.3
   '@tailwindcss/vite':
-    specifier: ^4.3.3
+    specifier: ^4.3.0
     version: 4.3.3(vite@8.1.5)
   astro:
     specifier: ^6.0.6
     version: 6.4.8
   daisyui:
-    specifier: ^5.7.7
-    version: 5.7.7
+    specifier: ^5.7.8
+    version: 5.7.8
   dayjs:
     specifier: ^1.11.9
     version: 1.11.21
@@ -30,7 +30,7 @@ dependencies:
     specifier: ^0.35.0
     version: 0.35.3
   tailwindcss:
-    specifier: ^4.3.3
+    specifier: ^4.0.0
     version: 4.3.3
 
 devDependencies:
@@ -1239,13 +1239,13 @@ packages:
       - supports-color
     dev: false
 
-  /@napi-rs/wasm-runtime@1.2.0(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1):
-    resolution: {integrity: sha512-kDoONqMa+VnZ4vvvu/ZUurpJ4gkZU57e7g69qpNgWhYcZFPUHZM2CEMKm+cG6ufDVALbjMvfmMjFVqaK7uEMnA==}
+  /@napi-rs/wasm-runtime@1.2.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1):
+    resolution: {integrity: sha512-KjZdi8Q1wh89gsVmghvbrMgWl6ZWmRmHV6wjB7/g4Zf0dyO+hH3neZUtuDNPO00qq5YE5RITVWvrIZKRaAmzGQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=23.5.0}
     requiresBuild: true
     peerDependencies:
-      '@emnapi/core': ^2.0.0-alpha.3
-      '@emnapi/runtime': ^2.0.0-alpha.3
+      '@emnapi/core': ^1.7.1 || ^2.0.0-alpha.3
+      '@emnapi/runtime': ^1.7.1 || ^2.0.0-alpha.3
     dependencies:
       '@emnapi/core': 1.11.1
       '@emnapi/runtime': 1.11.1
@@ -1402,7 +1402,7 @@ packages:
     dependencies:
       '@emnapi/core': 1.11.1
       '@emnapi/runtime': 1.11.1
-      '@napi-rs/wasm-runtime': 1.2.0(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
+      '@napi-rs/wasm-runtime': 1.2.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
     dev: false
     optional: true
 
@@ -2240,8 +2240,8 @@ packages:
       css-tree: 2.2.1
     dev: false
 
-  /daisyui@5.7.7:
-    resolution: {integrity: sha512-k3fza99NburOj18SGqMmvMOoIP4iSKkw4PbaE8gCxNOvwoNdEg4HlKgNJjsh+00RijMVKNgOTNqw42FfOT5Ukw==}
+  /daisyui@5.7.8:
+    resolution: {integrity: sha512-/r3QoXteCOSlbvUM7bfOTIkc3rq6WskDRKgdTIF7M3ufdnY8gXsAo/CfRUNM2La21Kpnr34PGyU3uDFJ6sGJog==}
     dev: false
 
   /dayjs@1.11.21:

@@ -21,11 +21,11 @@ dependencies:
     specifier: ^6.0.6
     version: 6.4.8
   daisyui:
-    specifier: ^5.7.18
+    specifier: ^5.0.0
     version: 5.7.18
   dayjs:
-    specifier: ^1.11.9
-    version: 1.11.22
+    specifier: ^1.11.23
+    version: 1.11.23
   sharp:
     specifier: ^0.35.0
     version: 0.35.3
@@ -1960,8 +1960,8 @@ packages:
     resolution: {integrity: sha512-ucODxcoGsL5oqMMiO5SzX++cAuNiko4S3XipKtEtq4c1t8tpeetcCBJSVe1t+C/q2oXgRv/wYz5yu1rXE5Cl1A==}
     dev: false
 
-  /dayjs@1.11.22:
-    resolution: {integrity: sha512-1YRnxzt/AabP3GHxnaB9/b+ZScCKu5TeF+co+BWG+lnWVIwEcTFc1FVE0WLNmNO3sA6GGXL40i5qkHfbLzpwrg==}
+  /dayjs@1.11.23:
+    resolution: {integrity: sha512-QDTCU0M0MxR3hQfnlDJfwekQiaanm1ubOD231u73WBckQ/fsamwRLiE2GBz6D3a/xF1NgfiDLJjXBa1hYOYTtQ==}
     dev: false
 
   /debug@4.4.3:

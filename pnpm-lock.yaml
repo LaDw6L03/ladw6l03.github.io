@@ -21,10 +21,10 @@ dependencies:
     specifier: ^6.0.6
     version: 6.4.8
   daisyui:
-    specifier: ^5.0.0
-    version: 5.7.18
+    specifier: ^5.7.19
+    version: 5.7.19
   dayjs:
-    specifier: ^1.11.23
+    specifier: ^1.11.9
     version: 1.11.23
   sharp:
     specifier: ^0.35.0
@@ -1956,8 +1956,8 @@ packages:
       css-tree: 2.2.1
     dev: false
 
-  /daisyui@5.7.18:
-    resolution: {integrity: sha512-ucODxcoGsL5oqMMiO5SzX++cAuNiko4S3XipKtEtq4c1t8tpeetcCBJSVe1t+C/q2oXgRv/wYz5yu1rXE5Cl1A==}
+  /daisyui@5.7.19:
+    resolution: {integrity: sha512-0ylsSwFdzecFBh1XKPw/FB74bYX1kiufv7/dFvj3FxrUMWGkACfwqIzIMrsxIMzUlKF6ZHwH6YaOwPNvQGGmsg==}
     dev: false
 
   /dayjs@1.11.23:

@@ -12,7 +12,7 @@ dependencies:
     specifier: ^4.0.17
     version: 4.0.19
   '@astrojs/sitemap':
-    specifier: ^3.7.4
+    specifier: ^3.7.1
     version: 3.7.4
   '@tailwindcss/vite':
     specifier: ^4.3.0
@@ -21,13 +21,13 @@ dependencies:
     specifier: ^6.0.6
     version: 6.4.8
   daisyui:
-    specifier: ^5.0.0
-    version: 5.7.19
+    specifier: ^5.7.32
+    version: 5.7.32
   dayjs:
     specifier: ^1.11.9
     version: 1.11.23
   sharp:
-    specifier: ^0.35.4
+    specifier: ^0.35.0
     version: 0.35.4
   tailwindcss:
     specifier: ^4.0.0
@@ -1964,8 +1964,8 @@ packages:
       css-tree: 2.2.1
     dev: false
 
-  /daisyui@5.7.19:
-    resolution: {integrity: sha512-0ylsSwFdzecFBh1XKPw/FB74bYX1kiufv7/dFvj3FxrUMWGkACfwqIzIMrsxIMzUlKF6ZHwH6YaOwPNvQGGmsg==}
+  /daisyui@5.7.32:
+    resolution: {integrity: sha512-8JQFneb+okHxzPimTGvRKX+5XF03GyAwGw7BaV6+6XpzW0klGuzc4rdfUpLQxIYPKEziwwlrsYfcxoltF2Rowg==}
     dev: false
 
   /dayjs@1.11.23:

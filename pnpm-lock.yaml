@@ -16,13 +16,13 @@ dependencies:
     version: 3.7.4
   '@tailwindcss/vite':
     specifier: ^4.3.0
-    version: 4.3.3(vite@8.2.2)
+    version: 4.3.3(vite@8.3.0)
   astro:
     specifier: ^6.0.6
     version: 6.4.8
   daisyui:
-    specifier: ^5.7.32
-    version: 5.7.32
+    specifier: ^5.7.34
+    version: 5.7.34
   dayjs:
     specifier: ^1.11.9
     version: 1.11.23
@@ -1590,7 +1590,7 @@ packages:
       tailwindcss: 4.3.3
     dev: true
 
-  /@tailwindcss/vite@4.3.3(vite@8.2.2):
+  /@tailwindcss/vite@4.3.3(vite@8.3.0):
     resolution: {integrity: sha512-yYU8cogLeSh/ms2jh8Fj7jaba/EWa7Ja6GoUqYZaraEuCI5YS6ms6ObZgjjedm+jm6XZjdNRWBpPP6Z86oOxcw==}
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
@@ -1598,7 +1598,7 @@ packages:
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
       tailwindcss: 4.3.3
-      vite: 8.2.2
+      vite: 8.3.0
     dev: false
 
   /@types/debug@4.1.13:
@@ -1964,8 +1964,8 @@ packages:
       css-tree: 2.2.1
     dev: false
 
-  /daisyui@5.7.32:
-    resolution: {integrity: sha512-8JQFneb+okHxzPimTGvRKX+5XF03GyAwGw7BaV6+6XpzW0klGuzc4rdfUpLQxIYPKEziwwlrsYfcxoltF2Rowg==}
+  /daisyui@5.7.34:
+    resolution: {integrity: sha512-drdJxHnMKnXzOHuATunzvvCPwGonQEZjZXuWN8IQdE1PaOx/DRjv7pH4A1zZ4Jeyw/eAQktYYw1IzmRQKqLanw==}
     dev: false
 
   /dayjs@1.11.23:
@@ -4520,13 +4520,13 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vite@8.2.2:
-    resolution: {integrity: sha512-cFKLV/PRgAUlIRm5WjMjJ86jrftzpqcgH+Us+DS8mI3CDNiH30Whrz8uHL3+MOLPAgqbMBAqWdAHAphOAM+z/Q==}
+  /vite@8.3.0:
+    resolution: {integrity: sha512-lhZBVvEHefgE+HQZC9O7EBJgCU/nVzFNl7vkS4RE0APtWLP02/8QVIkQtzBxPquh7lq5/78NHipTj7ODQ6XuyQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
-      '@vitejs/devtools': ^0.4.0 || ^0.5.0
+      '@vitejs/devtools': ^0.7.1
       esbuild: ^0.27.0 || ^0.28.0
       jiti: '>=1.21.0'
       less: ^4.0.0
